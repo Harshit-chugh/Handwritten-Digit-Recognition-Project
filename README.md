@@ -6,7 +6,7 @@ This is a machine learning based application built using Python and Gradio that 
 
 The project consists of the following files:
 
-- `app.py`: The main VS code python file that handles the user interface, gradio sketchpad input and digit prediction.
+- `app.py`: The main VS code python file that handles the gradio interface, local URL, sketchpad input and digit prediction.
 - `train_model.py`: A Python script for training the Convolutional Neural Network (CNN) model and saving it to a file (model.h5).
 - `handwritten_digit_recognition.ipynb`: A Jupyter Notebook containing the code for experimenting with loading the MNIST dataset, data preprocessing, model building, training, and evaluation.
 - `requirements.txt`: A text file listing the required Python packages and their versions.
@@ -29,9 +29,24 @@ python train_model.py
 ## Running the Application
 
 The app.py script sets up a VS Code application with the following features:
-1. Gradio Sketchpad: Allows users to draw any digit using brush.
-2. Output 1: Shows the uploaded image.
+1. Gradio Sketchpad(Img): Allows users to draw any digit using brush.
+2. Submit Button: Allows to upload image.
 3. Image Preprocessing: Converts the image to grayscale, resizes it to 28x28 pixels, and normalizes the pixel values.
-4. Prediction: Uses the pre-trained model to predict the digit in the output 1 image.
-5. Result Display: Shows the predicted digit.
-6. Download Option: Provides a link to download the predicted result as a text file.
+4. Prediction: Uses the pre-trained model to predict the digit in the submitted image.
+5. Result Display: Shows top three predictions of digit.
+6. Flag Option: Provides a link to download the predicted result as a images.
+7. Clear Button: Allows to clear sketchpad & output and draw to upload or predict other digit.
+
+To run the application, execute the app.py script:
+```
+python app.py
+
+```
+
+Gradio also ceates a local URL `Running on local URL:  http://127.0.0.1:7860` on which interface runs and we get ouputs
+
+## Example Workflow
+1. Draw Digit: open url and draw any digit on sketchpad using brush.
+2. Submit the Digit: The drawn digit will be submitted to model.
+3. Get Prediction: The model will predict the top 3 digits and display the predictions result in percentage.
+4. Download Result: Click the flag to save the input and prediction to a folder.
