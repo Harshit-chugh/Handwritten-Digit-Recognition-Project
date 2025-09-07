@@ -2,6 +2,8 @@
 
 This is a machine learning based application built using Python and Gradio that allows users to draw images of handwritten digits and have them recognized by a pre-trained deep learning model. The model is trained on the MNIST dataset, which consists of 70,000 images of handwritten digits (60,000 for training and 10,000 for testing), with each image being 28x28 pixels in grayscale. The project includes two main components: training the CNN model and deploying the application.
 
+![handwritten](https://github.com/user-attachments/assets/b5565235-959e-40f0-ab67-d7c4f371e6d1)
+
 ## Project Structure
 
 The project consists of the following files:
@@ -10,6 +12,7 @@ The project consists of the following files:
 - `train_model.py`: A Python script for training the Convolutional Neural Network (CNN) model and saving it to a file (model.h5).
 - `handwritten_digit_recognition.ipynb`: A Jupyter Notebook containing the code for experimenting with loading the MNIST dataset, data preprocessing, model building, training, and evaluation.
 - `requirements.txt`: A text file listing the required Python packages and their versions.
+
 
 ## Training the Model
 The train_model.py script performs the following tasks:
